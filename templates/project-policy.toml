@@ -1,0 +1,14 @@
+# Project-specific auto-approvals for Gemini CLI
+# Place this in .gemini/policies/project-overrides.toml
+
+[[rule]]
+toolName = "run_shell_command"
+commandPrefix = "mkdir"
+decision = "allow"
+priority = 500
+
+[[rule]]
+toolName = "run_shell_command"
+commandPrefix = ["sips", "ls", "pwd"]
+decision = "allow"
+priority = 100
